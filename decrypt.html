@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Read Encrypted Message</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Read Encrypted Message</h1>
+
+        <input type="text" id="numbers" placeholder="Enter encrypted numbers">
+
+        <button onclick="decryptMessage()">
+            Decode
+        </button>
+
+        <p id="result"></p>
+
+        <a href="index.html">
+            <button>Go Back</button>
+        </a>
+
+    </div>
+
+    <script>
+
+        function decryptMessage()
+        {
+            let numbers = document.getElementById("numbers").value;
+
+            let splitNumbers = numbers.split(" ");
+
+            let text = "";
+
+            for(let i = 0; i < splitNumbers.length; i++)
+            {
+                text += String.fromCharCode(splitNumbers[i]);
+            }
+
+            document.getElementById("result").innerHTML = text;
+        }
+
+    </script>
+
+</body>
+
+</html>

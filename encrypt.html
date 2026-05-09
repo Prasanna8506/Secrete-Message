@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Encrypt Message</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Encrypt Message</h1>
+
+        <input type="text" id="message" placeholder="Enter your message">
+
+        <button onclick="encryptMessage()">
+            Convert
+        </button>
+
+        <button onclick="copyMessage()">
+            Copy
+        </button>
+
+        <p id="result"></p>
+
+        <a href="index.html">
+            <button>Go Back</button>
+        </a>
+
+    </div>
+
+    <script>
+
+        function encryptMessage()
+        {
+            let text = document.getElementById("message").value;
+
+            let encrypted = "";
+
+            for(let i = 0; i < text.length; i++)
+            {
+                encrypted += text.charCodeAt(i) + " ";
+            }
+
+            document.getElementById("result").innerHTML = encrypted;
+        }
+
+        function copyMessage()
+        {
+            let text = document.getElementById("result").innerText;
+
+            navigator.clipboard.writeText(text);
+
+            alert("Encrypted message copied!");
+        }
+
+    </script>
+
+</body>
+
+</html>
