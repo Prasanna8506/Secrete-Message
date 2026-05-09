@@ -57,7 +57,7 @@ project-folder/
 
 ## Author
 
-Your Name
+Prasanna Kulkarni
 
 ## License
 
