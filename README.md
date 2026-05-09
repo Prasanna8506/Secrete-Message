@@ -1,4 +1,4 @@
-# Secrete-Message-
+# Secrete-Message
 
 A simple message encryption and decryption web application built using HTML and JavaScript.
 
